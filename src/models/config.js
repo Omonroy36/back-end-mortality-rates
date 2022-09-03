@@ -1,6 +1,6 @@
 import Sequelize from "sequelize";
 
-const sequelize = new Sequelize("postgres", "postgres", "admin", {
+const sequelize = new Sequelize("test", "postgres", "admin", {
   host: "localhost",
   dialect: "postgres",
   pool: {
