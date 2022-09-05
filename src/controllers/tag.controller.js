@@ -1,5 +1,6 @@
 import { Op } from "sequelize";
 import { Tag } from "../models/Tag.model";
+import { tagsData } from "../utils/tagsData";
 
 export async function getTags(req, res) {
   try {
@@ -64,6 +65,24 @@ export async function getTagsByName(req, res) {
       res.status(404).json({
         msg: "no tags where found",
       });
+  } catch (error) {
+    res.status(400).json({
+      error: error.message,
+    });
+  }
+}
+
+export async function populateTags(req, res) {
+  try {
+    for (const tag of tagsData) {
+      const newTag = await Tag.create(tag);
+      if (!newTag) res.status(400).json({
+        msg: 'error creating tag',
+      });
+    }
+    res.status(200).json({
+      msg: 'tags created',
+    });
   } catch (error) {
     res.status(400).json({
       error: error.message,
