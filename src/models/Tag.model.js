@@ -12,10 +12,12 @@ export const Tag = sequelize.define(
     name: {
       type: STRING,
       allowNull: false,
+      unique: true,
     },
     slug: {
       type: STRING,
       allowNull: false,
+      unique: true
     },
   },
   {

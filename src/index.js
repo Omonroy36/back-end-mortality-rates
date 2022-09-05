@@ -3,6 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import sequelize from "./models/config";
 import tagRoute from "./routes/tag";
+import mortalityRoute from "./routes/mortality";
 
 const app = express();
 
@@ -18,6 +19,7 @@ app.use(urlencoded({ extended: true }));
 
 //Routes
 app.use("/api/tag", tagRoute);
+app.use("/api/mortality", mortalityRoute);
 
 //Root endpoint
 app.get("/", (req, res) => {
