@@ -22,10 +22,10 @@ Para llenar la base de datos con la información debes ejecutar las siguientes r
 
 Una ves hecho eso puedes consultar los siguientes endpoints:
 
-`/api/tag/getBy` method `GET` query params `name`
-`/api/mortality/getBy` method `GET` query params `tag,year`
-`/api/tag/getAll` method `GET`
-`/api/mortality/getAll` method `GET`
+`/api/tag/getBy` method `GET` query params `name` \
+`/api/mortality/getBy` method `GET` query params `tag,year` \
+`/api/tag/getAll` method `GET` \
+`/api/mortality/getAll` method `GET` \
 
 ### Mejoras que se pueden realizar
 
